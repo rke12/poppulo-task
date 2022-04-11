@@ -7,7 +7,9 @@ Submission for Senior Test Engineer take home task at Poppulo for Rachel Egan.
 The task is comprised of two parts. 
 
 - Part 1 is a report on Exploratory testing of the given API. This is documented in the file 'part1.md'. 
-- Part 2 is the automation excercise. Lemoncheesecake was the framework used for the automation task. 
+- Part 2 is the automation excercise. Lemoncheesecake was the framework used for the automation task. Built using Python 3.10 and packages installed using pip 22.0.4
+
+
 
     The code for the automation task can be found in the 'my_suites.py' file in the 'suites' folder. Here you will find four tests that test Employee API by sending requests to create, read, update and delete an employee. 
 

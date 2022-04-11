@@ -5,12 +5,12 @@ This is a brief exploratory testing report for the REST API Employee service fou
 
 http://dummy.restapiexample.com/
 
-This document outlines an evaluation of the API tested, what was tested and how it was tested, and a retropective of the design and implementation of the API which includes how the team could of handled this project to result with a better and more usable service as well as how it should be tested as a team going forward.
+This document outlines an evaluation of the API tested, what was tested and how it was tested, and a retrospective of the design and implementation of the API which includes how the team could have handled this project to result with a better and more usable service as well as how it should be tested as a team going forward.
 
 ---
 ## Evaluation of the quality of the API
 
----
+
 This is not a well designed or implemented API, in my opinion. It is inconsistent in successfully returning users, the data returned is inconsistent too. For example, when trying to return a specific Employee entry based on the ID given, you would be inconsistently thrown a 429 Error of 'too many requests'. This shows that the API itself is not stable and could not really be relied on to consistently pull specific data from.
 
 As well as that, when you use a GET request to pull a specific employee, depending on the ID used, the data returned displays as NULL. However if you use the same ID number to update that record you are returned the correct data that was just sent in the PUT request. There are many reasons why this could be, it might be that data is not mapped correctly or there are some other measure(s) in place. 
@@ -21,17 +21,17 @@ From my findings there is not much in the way of handling bad requests. Part of 
 
 ---
 ## What was tested and how
----
+
 
 The API was manually tested using Postman to send GET, PUT, POST, and DEL requests to the given API. 
 
-My approach for each of the request types was to first send a positive request, with the data that the API would successfully consume. AFter that I would change the data that was in the request, varying between letters, symbols and numbers and note the response returned (positive 200 response for the extreme majority despite my expectations of errors). I would then change parameters in the URI to see what would happen with unexpected parameters. In most instances of changing the URI a 405 method not allowed error was returned.
+My approach for each of the request types was to first send a positive request, with the data that the API would successfully consume. After that I would change the data that was in the request, varying between letters, symbols and numbers and note the response returned (positive 200 response for the extreme majority despite my expectations of errors). I would then change parameters in the URI to see what would happen with unexpected parameters. In most instances of changing the URI a 405 method not allowed error was returned.
 
 Requests have been saved as a collection on Postman and can be sent on if needed.
 
 ---
 ## Retrospective on design and implementation phase
----
+
 
 From my point of view, after an exploratory testing session on the API, it's quite clear that there was a large breakdown in communication during the early phase of designing and implementation of the API, with very limited testing done, if any.
 
